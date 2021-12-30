@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["plugin:react/recommended"],
+  extends: ["plugin:react/recommended", "plugin:storybook/recommended"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
@@ -23,7 +23,12 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "warn",
     "no-caller": "warn",
     "no-bitwise": "warn",
-    "no-console": ["warn", { allow: ["log", "error", "info", "time", "timeEnd", "trace"] }],
+    "no-console": [
+      "warn",
+      {
+        allow: ["log", "error", "info", "time", "timeEnd", "trace"],
+      },
+    ],
     "no-multiple-empty-lines": "warn",
     "no-new-wrappers": "warn",
     "no-debugger": "warn",
